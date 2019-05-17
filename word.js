@@ -8,3 +8,5 @@ for (var i = 0; i <answer.length; i++) {
     this.objArray.push(letter);
 }
 
+
+
