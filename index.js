@@ -23,3 +23,11 @@ var correct = [];
 
 var guesses = 15; 
 
+function information () {
+    if (newWord) {
+        var randomIndex = Math.floor(Math.random () * leagueChampions.length);
+        var randomWord = leagueChampions[randomIndex];
+
+        compWord = new Word (randomWord);
+    }
+}
