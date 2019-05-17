@@ -16,3 +16,10 @@ var randomIndex = Math.floor(Math.random() * leagueChampions.length);
 var randomWord = leagueChampions[randomIndex];
 
 //constructor for leagueChampions array
+compWord = new Word (randomWord);
+
+var incorrect = [];
+var correct = [];
+
+var guesses = 15; 
+
