@@ -23,9 +23,9 @@
 *******************************************************************************
 ## All Technologies Used
 
-Javascript 
+- Javascript 
 
-Node.js
+- Node.js
 
 ### Node NPM Packages: 
 - Inquirer
