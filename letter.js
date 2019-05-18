@@ -1,6 +1,6 @@
 function Letter (value) {
     this.letter = value; 
-    this.guessed = true;
+    this.guessed = false;
     this.toString = function (){
        if (this.letter === " ") {
            this.guessed === true; 

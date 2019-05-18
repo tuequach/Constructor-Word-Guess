@@ -1,7 +1,6 @@
 
 //initialize constructor file
-
-var Word = require ('./word.js');
+var Word = require("./word.js");
 var inquirer = require('inquirer');
 
 //input of all alphabet letters
@@ -41,22 +40,22 @@ var wordComplete = [];
 compWord.objArray.forEach(completeCheck);
 
 //letters left that need to be guessed
-if (wordComplete === false) {
+if (wordComplete.includes(false)) {
     inquirer
     .prompt ([
         {
             type: 'input',
-            message: 'Guess a letter (A-Z)!',
-            name: 'userInput'
+            message: 'Welcome to League of Legends Champions Hangman! \nGuess a letter (A-Z)!',
+            name: 'userinput'
         }
     ])
     .then(function (input) {
-        if (!letterArray === input.userInput || input.userInput.length > 1) {
+        if (!letterArray.includes(input.userinput) || input.userinput.length > 1) {
             console.log('\nWrong! Try Again!\n');
             information();
         } else {
 
-            if (incorrect === input.userInput || correct === input.userInput || input.userInput === '') {
+            if (incorrect.includes(input.userinput) || correct.includes(input.userinput) || input.userinput === '') {
                 console.log("\nYou've Already Guessed It!\n");
                 information();
             } else {
@@ -64,17 +63,17 @@ if (wordComplete === false) {
                 //Checking if guesses are correct 
                 var checkArray = [];
 
-                compWord.userGuess(input.userInput);
+                compWord.userGuess(input.userinput);
 
-                compWord.objArray.forEach(checkArray);
+                compWord.objArray.forEach(wordCheck);
                 if (checkArray.join('') === wordComplete.join('')) {
                     console.log('\nThis Is Incorrect!\n');
 
-                    incorrect.push(input.userInput);
+                    incorrect.push(input.userinput);
                     guesses--;
                 } else {
                     console.log ('\nThis is Correct!\n');
-                    correct.push(input.userInput);
+                    correct.push(input.userinput);
                 }
 
                 compWord.log();
@@ -92,7 +91,7 @@ if (wordComplete === false) {
             resetGame();
         }
 
-        function checkArray (key) {
+        function wordCheck (key) {
             checkArray.push(key.guessed);
                 }
             }
