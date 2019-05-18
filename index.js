@@ -1,3 +1,4 @@
+
 //initialize constructor file
 
 var Word = require ('./word.js');
